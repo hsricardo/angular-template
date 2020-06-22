@@ -1,0 +1,17 @@
+@import "./src/styles";
+
+.example-screen {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 100vw;
+  height: 100vh;
+  background-color: $dark-background;
+
+  .example-screen-component {
+    width: 50%;
+    height: fit-content;
+    background-color: $light-background;
+  }
+}

@@ -1,0 +1,11 @@
+@import "./src/styles";
+
+.example-component {
+  color: $primary-text;
+  font-size: 1em;
+  padding: 2em 2em 0 2em;
+
+  .example-component-text {
+    margin-bottom: 2em;
+  }
+}

@@ -1,0 +1,17 @@
+<div class="example-component">
+  <div class="example-component-text">
+    required: {{ input.required }}
+    <br>
+    variable: {{ input.variable }}
+  </div>
+
+  <div *ngIf="input.optional" class="example-component-text">
+    optional: {{ input.optional }}
+  </div>
+
+  <div class="example-component-text">
+    <ng-container *ngFor="let item of input.array">
+      array: {{ item }}
+    </ng-container>
+  </div>
+</div>
