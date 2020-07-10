@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {InterfaceExample} from '../../interfaces/interface-example';
+import {ExampleService} from '../../services/example.service';
 
 @Component({
   selector: 'app-example-screen',
@@ -10,7 +11,7 @@ export class ExampleScreenComponent implements OnInit {
 
   inputExample: InterfaceExample;
 
-  constructor() { }
+  constructor( private exampleService: ExampleService) { }
 
   ngOnInit(): void {
     this.inputExample = {
@@ -23,5 +24,11 @@ export class ExampleScreenComponent implements OnInit {
 
   onEmit(event: any): void {
     console.log(event);
+
+    // this.exampleService.postExample().subscribe((data: any) => {
+    //   console.log('data:', data);
+    // }, (error: any) => {
+    //   console.error('error:', error);
+    // });
   }
 }
